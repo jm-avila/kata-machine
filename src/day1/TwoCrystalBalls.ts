@@ -8,9 +8,9 @@ export default function two_crystal_balls(breaks: boolean[]): number {
         }
     }
 
+    const knownBreakPoint = i;
     i -= jumpLength;
-
-    for (; i < breaks.length; i++) {
+    for (; i < knownBreakPoint; i++) {
         if (breaks[i]) {
             return i;
         }
